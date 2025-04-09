@@ -3,7 +3,7 @@ describe('Comment', () => {
     cy.login()
     cy.request({
       method: 'POST',
-      url: '/api/method/gameplan.test_api.clear_data?onboard=1',
+      url: '/api/method/teamplan.test_api.clear_data?onboard=1',
     })
     cy.request('POST', '/api/method/frappe.client.insert_many', {
       docs: [
@@ -13,7 +13,7 @@ describe('Comment', () => {
         },
         {
           doctype: 'GP Project',
-          title: 'Gameplan',
+          title: 'teamplan',
           team: 'engineering',
         },
       ],
@@ -59,7 +59,7 @@ describe('Comment', () => {
       .then((comment) => {
         cy.intercept({
           method: 'POST',
-          url: '/api/method/gameplan.extends.client.batch',
+          url: '/api/method/teamplan.extends.client.batch',
         }).as('batchRequest')
         // add a reaction
         cy.get(`div[data-id=${comment.name}] button[aria-label="Add a reaction"]`).click()

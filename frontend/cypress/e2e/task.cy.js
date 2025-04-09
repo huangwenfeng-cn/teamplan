@@ -3,7 +3,7 @@ describe('Task', () => {
     cy.login()
     cy.request({
       method: 'POST',
-      url: '/api/method/gameplan.test_api.clear_data?onboard=1',
+      url: '/api/method/teamplan.test_api.clear_data?onboard=1',
     })
     cy.request('POST', '/api/method/frappe.client.insert_many', {
       docs: [
@@ -13,7 +13,7 @@ describe('Task', () => {
         },
         {
           doctype: 'GP Project',
-          title: 'Gameplan',
+          title: 'teamplan',
           team: 'engineering',
         },
         {

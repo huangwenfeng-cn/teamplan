@@ -1,3 +1,3 @@
-# Gameplan
+# teamplan
 
 Team discussion and collaboration tool

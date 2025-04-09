@@ -54,7 +54,7 @@ export default {
   resources: {
     changeUserRole() {
       return {
-        url: 'gameplan.api.change_user_role',
+        url: 'teamplan.api.change_user_role',
         onSuccess(user) {
           users.setData((data) => {
             return data.map((_user) => {
@@ -69,7 +69,7 @@ export default {
     },
     removeUser() {
       return {
-        url: 'gameplan.api.remove_user',
+        url: 'teamplan.api.remove_user',
         onSuccess(user) {
           users.setData((data) => data.filter((_user) => _user.name !== user))
         },
@@ -136,7 +136,7 @@ export default {
       })
     },
     getUserRole(user) {
-      return (user.role || '').replace('Gameplan', '')
+      return (user.role || '').replace('teamplan', '')
     },
     getDropdownOptions(user) {
       return [
@@ -146,11 +146,11 @@ export default {
             RoleOption({
               role: 'Admin',
               active: props.active,
-              selected: user.role === 'Gameplan Admin',
+              selected: user.role === 'teamplan Admin',
               onClick: () =>
                 this.changeUserRole({
                   user: user,
-                  role: 'Gameplan Admin',
+                  role: 'teamplan Admin',
                 }),
             }),
         },
@@ -160,11 +160,11 @@ export default {
             RoleOption({
               role: 'Member',
               active: props.active,
-              selected: user.role === 'Gameplan Member',
+              selected: user.role === 'teamplan Member',
               onClick: () =>
                 this.changeUserRole({
                   user: user,
-                  role: 'Gameplan Member',
+                  role: 'teamplan Member',
                 }),
             }),
         },
@@ -174,11 +174,11 @@ export default {
             RoleOption({
               role: 'Guest',
               active: props.active,
-              selected: user.role === 'Gameplan Guest',
+              selected: user.role === 'teamplan Guest',
               onClick: () =>
                 this.changeUserRole({
                   user: user,
-                  role: 'Gameplan Guest',
+                  role: 'teamplan Guest',
                 }),
             }),
         },

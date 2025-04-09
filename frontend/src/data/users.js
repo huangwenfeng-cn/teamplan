@@ -5,12 +5,12 @@ import { session } from './session'
 
 let usersByName = reactive({})
 export let users = createResource({
-  url: 'gameplan.api.get_user_info',
+  url: 'teamplan.api.get_user_info',
   cache: 'Users',
   initialData: [],
   transform(users) {
     for (let user of users) {
-      user.isGuest = user.role === 'Gameplan Guest'
+      user.isGuest = user.role === 'teamplan Guest'
       user.isNotGuest = !user.isGuest
       user.isDisabled = user.enabled === 0
       usersByName[user.name] = user

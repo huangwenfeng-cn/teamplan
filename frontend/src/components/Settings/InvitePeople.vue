@@ -20,15 +20,15 @@
             label="Role"
             type="select"
             :options="[
-              { label: 'Admin', value: 'Gameplan Admin' },
-              { label: 'Member', value: 'Gameplan Member' },
-              { label: 'Guest', value: 'Gameplan Guest' },
+              { label: 'Admin', value: 'teamplan Admin' },
+              { label: 'Member', value: 'teamplan Member' },
+              { label: 'Guest', value: 'teamplan Guest' },
             ]"
             v-model="role"
           />
           <p class="mt-2 text-base text-ink-gray-9">{{ description }}</p>
         </div>
-        <div v-if="role === 'Gameplan Guest'">
+        <div v-if="role === 'teamplan Guest'">
           <label class="text-sm leading-4 text-ink-gray-7"> Invite Guest to Projects </label>
           <div class="mt-1 flex flex-wrap gap-2">
             <Button
@@ -71,7 +71,7 @@
             <span class="text-ink-gray-9">
               {{ user.email }}
             </span>
-            <span class="text-ink-gray-5"> ({{ user.role.replace('Gameplan ', '') }}) </span>
+            <span class="text-ink-gray-5"> ({{ user.role.replace('teamplan ', '') }}) </span>
           </div>
           <div>
             <Tooltip text="Delete Invitation">
@@ -102,7 +102,7 @@ export default {
   components: { Dropdown, Tooltip, Autocomplete },
   data() {
     return {
-      role: 'Gameplan Member',
+      role: 'teamplan Member',
       emails: '',
       invitedUsers: [],
       projects: [],
@@ -120,7 +120,7 @@ export default {
   },
   resources: {
     inviteByEmail: {
-      url: 'gameplan.api.invite_by_email',
+      url: 'teamplan.api.invite_by_email',
       makeParams() {
         return {
           emails: this.emails,
@@ -146,10 +146,10 @@ export default {
   computed: {
     description() {
       return {
-        'Gameplan Admin':
+        'teamplan Admin':
           'Can create new teams and projects, invite admins and members, browse and create discussions.',
-        'Gameplan Member': 'Can create projects, invite members, browse and create discussions.',
-        'Gameplan Guest': 'Can browse and participate in invited teams or projects.',
+        'teamplan Member': 'Can create projects, invite members, browse and create discussions.',
+        'teamplan Guest': 'Can browse and participate in invited teams or projects.',
       }[this.role]
     },
     projectOptions() {

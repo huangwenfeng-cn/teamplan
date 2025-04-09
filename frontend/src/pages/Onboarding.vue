@@ -1,7 +1,7 @@
 <template>
   <div class="flex h-full flex-col items-center bg-surface-gray-2 pt-10">
     <span class="select-none text-3xl font-black uppercase tracking-[0.5em] text-ink-gray-9">
-      Gameplan
+      teamplan
     </span>
     <div class="min mt-7 min-w-[36rem] rounded-lg bg-surface-white p-9 shadow-md">
       <div v-if="$resources.onboarding.loading" class="flex items-center justify-center">
@@ -63,7 +63,7 @@ export default {
   components: { Input, LoadingIndicator, ErrorMessage },
   resources: {
     onboarding: {
-      url: 'gameplan.api.onboarding',
+      url: 'teamplan.api.onboarding',
       makeParams() {
         return {
           data: this.data,

@@ -22,19 +22,19 @@ bench set-redis-socketio-host redis:6379
 sed -i '/redis/d' ./Procfile
 sed -i '/watch/d' ./Procfile
 
-bench get-app gameplan
+bench get-app teamplan
 
-bench new-site gameplan.localhost \
+bench new-site teamplan.localhost \
     --force \
     --mariadb-root-password 123 \
     --admin-password admin \
     --no-mariadb-socket
 
-bench --site gameplan.localhost install-app gameplan
-bench --site gameplan.localhost set-config developer_mode 1
-bench --site gameplan.localhost clear-cache
-bench --site gameplan.localhost set-config mute_emails 1
-bench --site gameplan.localhost add-user alex@example.com --first-name Alex --last-name Scott --password 123 --user-type 'System User' --add-role 'Gameplan Admin'
-bench use gameplan.localhost
+bench --site teamplan.localhost install-app teamplan
+bench --site teamplan.localhost set-config developer_mode 1
+bench --site teamplan.localhost clear-cache
+bench --site teamplan.localhost set-config mute_emails 1
+bench --site teamplan.localhost add-user alex@example.com --first-name Alex --last-name Scott --password 123 --user-type 'System User' --add-role 'teamplan Admin'
+bench use teamplan.localhost
 
 bench start

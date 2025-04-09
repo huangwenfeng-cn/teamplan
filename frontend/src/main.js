@@ -38,7 +38,7 @@ let globalComponents = {
 }
 let app = createApp(App)
 setConfig('resourceFetcher', frappeRequest)
-setConfig('defaultListUrl', 'gameplan.extends.client.get_list')
+setConfig('defaultListUrl', 'teamplan.extends.client.get_list')
 app.use(resourcesPlugin)
 app.use(pageMetaPlugin)
 app.use(router)
@@ -61,7 +61,7 @@ app.config.globalProperties.$isSessionUser = (email) => {
 
 let socket
 if (import.meta.env.DEV) {
-  frappeRequest({ url: '/api/method/gameplan.www.g.get_context_for_dev' }).then((values) => {
+  frappeRequest({ url: '/api/method/teamplan.www.g.get_context_for_dev' }).then((values) => {
     for (let key in values) {
       window[key] = values[key]
     }
@@ -76,10 +76,10 @@ if (import.meta.env.DEV) {
 }
 
 // sentry error logging
-if (import.meta.env.PROD && window.gameplan_frontend_sentry_dsn) {
+if (import.meta.env.PROD && window.teamplan_frontend_sentry_dsn) {
   Sentry.init({
     app,
-    dsn: window.gameplan_frontend_sentry_dsn,
+    dsn: window.teamplan_frontend_sentry_dsn,
     integrations: [Sentry.browserTracingIntegration({ router })],
     tracesSampleRate: 1.0,
   })

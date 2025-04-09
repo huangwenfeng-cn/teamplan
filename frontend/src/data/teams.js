@@ -28,7 +28,7 @@ export let teams = createListResource({
 })
 
 export let unreadItems = createResource({
-  url: 'gameplan.api.get_unread_items',
+  url: 'teamplan.api.get_unread_items',
   cache: 'UnreadItems',
 })
 

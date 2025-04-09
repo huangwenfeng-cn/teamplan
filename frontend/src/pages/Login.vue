@@ -1,10 +1,10 @@
 <template>
   <div class="flex h-screen w-screen justify-center bg-surface-gray-2">
     <div class="mt-32 w-full px-4">
-      <GameplanLogo class="mx-auto h-8 w-8" />
+      <teamplanLogo class="mx-auto h-8 w-8" />
       <div class="mt-6 flex items-center justify-center space-x-1.5">
         <span class="text-3xl font-semibold text-ink-gray-9">Login to</span>
-        <GameplanLogoType class="h-6 text-ink-gray-9" />
+        <teamplanLogoType class="h-6 text-ink-gray-9" />
       </div>
       <div class="mx-auto mt-6 w-full px-4 sm:w-96">
         <form
@@ -30,7 +30,7 @@
               size="md"
               label="Password"
               v-model="password"
-              placeholder="••••••"
+              placeholder="•••••�?
               :disabled="session.login.loading"
               type="password"
             />
@@ -68,15 +68,15 @@
 import { ref } from 'vue'
 import { FormControl, createResource } from 'frappe-ui'
 import { session } from '@/data/session'
-import GameplanLogo from '@/components/GameplanLogo.vue'
-import GameplanLogoType from '@/components/GameplanLogoType.vue'
+import teamplanLogo from '@/components/teamplanLogo.vue'
+import teamplanLogoType from '@/components/teamplanLogoType.vue'
 
 let showEmailLogin = ref(false)
 let email = ref('')
 let password = ref('')
 
 let authProviders = createResource({
-  url: 'gameplan.api.oauth_providers',
+  url: 'teamplan.api.oauth_providers',
   auto: true,
   onSuccess(data) {
     showEmailLogin.value = data.length === 0

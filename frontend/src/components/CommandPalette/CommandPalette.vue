@@ -89,7 +89,7 @@ export default {
   resources: {
     search() {
       return {
-        url: 'gameplan.command_palette.search',
+        url: 'teamplan.command_palette.search',
         makeParams(query) {
           return { query }
         },

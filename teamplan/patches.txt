@@ -1,0 +1,25 @@
+[pre_model_sync]
+teamplan.patches.rename_doctypes_with_gp_prefix
+teamplan.teamplan.doctype.gp_discussion.patches.migrate_gp_bookmark_child
+
+[post_model_sync]
+teamplan.teamplan.doctype.team_user_profile.patches.create_user_profile
+teamplan.teamplan.doctype.team_user_profile.patches.set_name
+teamplan.teamplan.doctype.team_project_discussion.patches.rename_team_project_status_update_doctype
+teamplan.teamplan.doctype.team_project_discussion.patches.add_full_text_search_index
+teamplan.teamplan.doctype.team_discussion.patches.rename_team_project_discussion_to_team_discussion
+execute:frappe.delete_doc('DocType', 'Team Project Section', force=1)
+execute:frappe.delete_doc('DocType', 'Task Status', force=1)
+execute:frappe.delete_doc('DocType', 'Team Document', force=1)
+execute:frappe.delete_doc('DocType', 'Team Attachment', force=1)
+execute:frappe.delete_doc('DocType', 'Team Note', force=1)
+execute:frappe.delete_doc('DocType', 'Team Link', force=1)
+teamplan.teamplan.doctype.team_discussion.patches.set_title_slug
+teamplan.teamplan.doctype.team_discussion.patches.update_participants_count
+teamplan.patches.update_teamplan_roles
+teamplan.teamplan.doctype.team.patches.remove_invited_members
+execute:frappe.delete_doc_if_exists('DocType', 'Team Project Discussion', force=1)
+teamplan.teamplan.doctype.team_user_profile.patches.setup_rembg
+teamplan.teamplan.doctype.team_user_profile.patches.set_image
+teamplan.teamplan.doctype.gp_task.patches.set_status
+teamplan.teamplan.doctype.gp_discussion_visit.patches.add_unique_constraint

@@ -5,9 +5,9 @@
         class="flex w-[15rem] items-center rounded-md px-2 py-2 text-left"
         :class="open ? 'bg-surface-selected shadow-sm' : 'hover:bg-surface-gray-3'"
       >
-        <GameplanLogo class="w-8 h-8 rounded" />
+        <teamplanLogo class="w-8 h-8 rounded" />
         <div class="ml-2 flex flex-col">
-          <div class="text-base font-medium text-ink-gray-9 leading-none">Gameplan</div>
+          <div class="text-base font-medium text-ink-gray-9 leading-none">teamplan</div>
           <div class="mt-1 hidden text-sm text-ink-gray-7 sm:inline leading-none">
             {{ user.full_name }}
           </div>
@@ -23,7 +23,7 @@ import { Dropdown } from 'frappe-ui'
 import { showSettingsDialog } from '@/components/Settings/SettingsDialog.vue'
 import LucideCreditCard from '~icons/lucide/credit-card'
 import LucideMoon from '~icons/lucide/moon'
-import GameplanLogo from './GameplanLogo.vue'
+import teamplanLogo from './teamplanLogo.vue'
 import { getUser } from '@/data/users'
 import { session } from '@/data/session'
 

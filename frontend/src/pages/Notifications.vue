@@ -141,7 +141,7 @@ export default {
     },
     markAllAsRead() {
       return {
-        url: 'gameplan.api.mark_all_notifications_as_read',
+        url: 'teamplan.api.mark_all_notifications_as_read',
         onSuccess() {
           this.$getResource('Unread Notifications Count')?.reload()
           this.$resources.unreadNotifications.reload()

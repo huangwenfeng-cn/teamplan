@@ -33,7 +33,7 @@ export default {
   resources: {
     batch() {
       return {
-        url: 'gameplan.extends.client.batch',
+        url: 'teamplan.extends.client.batch',
         makeParams() {
           return { requests: this.changes }
         },

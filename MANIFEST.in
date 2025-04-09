@@ -4,15 +4,15 @@ include *.json
 include *.md
 include *.py
 include *.txt
-recursive-include gameplan *.css
-recursive-include gameplan *.csv
-recursive-include gameplan *.html
-recursive-include gameplan *.ico
-recursive-include gameplan *.js
-recursive-include gameplan *.json
-recursive-include gameplan *.md
-recursive-include gameplan *.png
-recursive-include gameplan *.py
-recursive-include gameplan *.svg
-recursive-include gameplan *.txt
-recursive-exclude gameplan *.pyc
+recursive-include teamplan *.css
+recursive-include teamplan *.csv
+recursive-include teamplan *.html
+recursive-include teamplan *.ico
+recursive-include teamplan *.js
+recursive-include teamplan *.json
+recursive-include teamplan *.md
+recursive-include teamplan *.png
+recursive-include teamplan *.py
+recursive-include teamplan *.svg
+recursive-include teamplan *.txt
+recursive-exclude teamplan *.pyc

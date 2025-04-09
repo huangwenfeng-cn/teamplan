@@ -1,7 +1,7 @@
 <div align="center" markdown="1">
 
-<img src="./frontend/public/gameplan-logo.svg" alt="Gameplan logo" width="80" />
-<h1>Gameplan</h1>
+<img src="./frontend/public/teamplan-logo.svg" alt="teamplan logo" width="80" />
+<h1>teamplan</h1>
 
 **Open Source Discussions Platform for Remote Teams**
 
@@ -13,28 +13,28 @@
 
 <div>
     <picture>
-        <source media="(prefers-color-scheme: dark)" srcset=".github/assets/gameplan-hero-dark.png">
-        <img width="1402" alt="Gameplan Homescreen Screenshot" src=".github/assets/gameplan-hero-light.png">
+        <source media="(prefers-color-scheme: dark)" srcset=".github/assets/teamplan-hero-dark.png">
+        <img width="1402" alt="teamplan Homescreen Screenshot" src=".github/assets/teamplan-hero-light.png">
     </picture>
 </div>
 
 </div>
 
-## Gameplan
+## teamplan
 
-Gameplan is an async-first discussions tool for remote teams. It encourages thoughtful communication and deep-thinking.
+teamplan is an async-first discussions tool for remote teams. It encourages thoughtful communication and deep-thinking.
 
 ### Motivation
-We've been remote first since day one, but as our team grew, chat tools like Telegram fell short. Missing out on crucial conversations became a major issue. We needed a better way to keep everyone connected and in sync. That's how Gameplan was born - to solve the problems of modern remote work!
+We've been remote first since day one, but as our team grew, chat tools like Telegram fell short. Missing out on crucial conversations became a major issue. We needed a better way to keep everyone connected and in sync. That's how teamplan was born - to solve the problems of modern remote work!
 
 ### Key Features
-- **Thread-first discussions**: Gameplan lets you start a discussion and have people comment on it at their own pace, encouraging thoughtful conversation and deep thinking. No more feeling obligated to be online all the time.
+- **Thread-first discussions**: teamplan lets you start a discussion and have people comment on it at their own pace, encouraging thoughtful conversation and deep thinking. No more feeling obligated to be online all the time.
 
-- **Spaces for organization**: Spaces help you categorize conversations by project, team, client, or topic â€“ whatever makes sense for your team's workflow. This keeps discussions tidy and easy to find.
+- **Spaces for organization**: Spaces help you categorize conversations by project, team, client, or topic â€?whatever makes sense for your team's workflow. This keeps discussions tidy and easy to find.
 
 - **Customizable profiles**: Get a better picture of who's on your team with profiles that let everyone showcase their personality: cover images, short bios, and profile pictures.
 
-- **Pages for note-taking**: Use pages as digital notes to jot down meeting minutes, proposals, ideas â€“ whatever sparks creativity! They can be private by default or shared with just your team or specific spaces.
+- **Pages for note-taking**: Use pages as digital notes to jot down meeting minutes, proposals, ideas â€?whatever sparks creativity! They can be private by default or shared with just your team or specific spaces.
 
 ### Under the Hood
 
@@ -50,7 +50,7 @@ You can try [Frappe Cloud](https://frappecloud.com), a simple, user-friendly and
 It takes care of installation, setup, upgrades, monitoring, maintenance and support of your Frappe deployments. It is a fully featured developer platform with an ability to manage and control multiple Frappe deployments.
 
 <div>
-	<a href="https://frappecloud.com/gameplan/signup" target="_blank">
+	<a href="https://frappecloud.com/teamplan/signup" target="_blank">
 		<picture>
 			<source media="(prefers-color-scheme: dark)" srcset="https://frappe.io/files/try-on-fc-white.png">
 			<img src="https://frappe.io/files/try-on-fc-black.png" alt="Try on Frappe Cloud" height="28" />
@@ -62,13 +62,13 @@ It takes care of installation, setup, upgrades, monitoring, maintenance and supp
 ### Docker
 You need Docker, docker-compose and git setup on your machine. Refer [Docker documentation](https://docs.docker.com/). After that, run the following commands:
 ```
-git clone https://github.com/frappe/gameplan
-cd gameplan/docker
+git clone https://github.com/frappe/teamplan
+cd teamplan/docker
 docker-compose up
 ```
 
 Wait for sometime until the setup script creates a site. After that you can
-access `http://localhost:8000` in your browser and Gameplan's login screen
+access `http://localhost:8000` in your browser and teamplan's login screen
 should show up.
 
 Use the following credentials to log in:
@@ -84,22 +84,22 @@ Currently, this app depends on the `develop` branch of [frappe](https://github.c
 1. In the frappe-bench directory, run `bench start` and keep it running. Open a new terminal session and cd into `frappe-bench` directory.
 1. Run the following commands:
     ```sh
-    bench new-site gameplan.test
-    bench get-app gameplan
-    bench --site gameplan.test install-app gameplan
-    bench --site gameplan.test add-to-hosts
-    bench --site gameplan.test browse --user Administrator
+    bench new-site teamplan.test
+    bench get-app teamplan
+    bench --site teamplan.test install-app teamplan
+    bench --site teamplan.test add-to-hosts
+    bench --site teamplan.test browse --user Administrator
     ```
- 1. Now, open a new terminal session and cd into `frappe-bench/apps/gameplan`, and run the following commands:
+ 1. Now, open a new terminal session and cd into `frappe-bench/apps/teamplan`, and run the following commands:
     ```
     yarn
     yarn dev
     ```
- 1. Now, you can access the site on vite dev server at `http://gameplan.test:8080`
+ 1. Now, you can access the site on vite dev server at `http://teamplan.test:8080`
 
 ## Links
 
-- [Discuss Gameplan](https://github.com/frappe/gameplan/discussions)
+- [Discuss teamplan](https://github.com/frappe/teamplan/discussions)
 
 <br>
 <br>

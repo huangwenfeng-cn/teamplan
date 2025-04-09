@@ -3,7 +3,7 @@ describe('Team', () => {
     cy.login()
     cy.request({
       method: 'POST',
-      url: '/api/method/gameplan.test_api.clear_data?onboard=1',
+      url: '/api/method/teamplan.test_api.clear_data?onboard=1',
     })
     cy.visit('/g')
     cy.get('button[aria-label="Create Team"]').click()
@@ -26,7 +26,7 @@ describe('Team', () => {
 
     cy.reload()
 
-    cy.get('button').contains('Gameplan').click()
+    cy.get('button').contains('teamplan').click()
     cy.get('button').contains('Settings').click()
     cy.get('button').contains('Archive').click()
     cy.contains('Engineering').should('exist')
