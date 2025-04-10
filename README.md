@@ -30,11 +30,11 @@ We've been remote first since day one, but as our team grew, chat tools like Tel
 ### Key Features
 - **Thread-first discussions**: teamplan lets you start a discussion and have people comment on it at their own pace, encouraging thoughtful conversation and deep thinking. No more feeling obligated to be online all the time.
 
-- **Spaces for organization**: Spaces help you categorize conversations by project, team, client, or topic â€?whatever makes sense for your team's workflow. This keeps discussions tidy and easy to find.
+- **Spaces for organization**: Spaces help you categorize conversations by project, team, client, or topic?whatever makes sense for your team's workflow. This keeps discussions tidy and easy to find.
 
 - **Customizable profiles**: Get a better picture of who's on your team with profiles that let everyone showcase their personality: cover images, short bios, and profile pictures.
 
-- **Pages for note-taking**: Use pages as digital notes to jot down meeting minutes, proposals, ideas â€?whatever sparks creativity! They can be private by default or shared with just your team or specific spaces.
+- **Pages for note-taking**: Use pages as digital notes to jot down meeting minutes, proposals, ideas?whatever sparks creativity! They can be private by default or shared with just your team or specific spaces.
 
 ### Under the Hood
 
